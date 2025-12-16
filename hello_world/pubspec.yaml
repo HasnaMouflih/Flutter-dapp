@@ -1,0 +1,33 @@
+# pubspec.yaml
+
+name: hello_world
+description: A new Flutter project for Ethereum DApp.
+
+# Ajoutez la contrainte SDK ici pour résoudre l'avertissement
+environment:
+  sdk: '>=3.3.0 <4.0.0' # Utilise la version 3.3.0 de Dart ou plus récente
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Dépendances requises pour la DApp (Blockchain & UI)
+  provider: ^6.1.2             # Pour la gestion d'état
+  http: ^1.2.1                 # Client HTTP pour les appels RPC
+  web3dart: ^2.6.1             # La librairie pour interagir avec Ethereum
+  web_socket_channel: ^3.0.0   # Utilisé par web3dart (pour les WebSockets)
+
+  # Les autres dépendances par défaut
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+# Ajoutez la section assets pour inclure le fichier JSON du contrat
+flutter:
+  uses-material-design: true
+  assets:
+    - src/artifacts/HelloWorld.json # Assurez-vous que ce chemin est correct
